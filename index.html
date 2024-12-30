@@ -12,7 +12,6 @@
             margin: 0;
             padding: 0;
             color: #333;
-            position: relative;
         }
 
         header {
@@ -31,34 +30,107 @@
             font-size: 3rem;
             margin: 0;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Ombre légère pour améliorer la lisibilité du texte */
-            color: white; /* Changer la couleur du titre en blanc */
+            color: white;
         }
 
         header p {
             font-size: 1.2rem;
             margin-top: 10px;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Ombre pour le sous-titre */
-            color: white; /* Couleur du texte en blanc */
+            color: white;
         }
 
+        /* Style de navigation */
         nav {
-            background-color: #FF5733; /* Changer la couleur de fond du menu en orange */
+            background-color: #FF5733; /* Couleur de fond du menu */
             padding: 10px;
             text-align: center;
+            position: relative;
         }
 
-        nav a {
-            color: white; /* Couleur des liens en blanc */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
             border-radius: 5px;
+            display: inline-block;
         }
 
-        nav a:hover {
+        .nav-links a:hover {
             background-color: #FF4500; /* Lien au survol avec un orange plus foncé */
         }
 
+        /* Menu Hamburger */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Ombre pour plus de lisibilité */
+        }
+
+        .menu-icon.open div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-icon.open div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-icon.open div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Responsive Design : Mobile */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                background-color: #FF5733;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                padding: 20px 0;
+                box-sizing: border-box;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 15px 20px;
+                font-size: 1.2rem;
+                width: 100%;
+            }
+
+            /* Affichage de l'icône hamburger */
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        /* Style pour les autres sections */
         .container {
             padding: 20px;
         }
@@ -68,11 +140,11 @@
         }
 
         h1, h2 {
-            color: black; /* Tous les autres titres (h1, h2) seront en noir */
+            color: black;
         }
 
         footer {
-            background-color: transparent; /* Fond complètement transparent */
+            background-color: transparent;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -80,7 +152,7 @@
             width: 100%;
             bottom: 0;
             z-index: 10;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre du texte pour améliorer la lisibilité */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .timeline ul {
@@ -97,7 +169,7 @@
 
         .timeline li h3 {
             margin: 0;
-            color: #FF5733; /* Titre des éléments de la timeline en orange */
+            color: #FF5733;
         }
 
         .timeline li p {
@@ -109,7 +181,7 @@
         }
 
         .btn-google {
-            background-color: #4285F4; /* Couleur de fond du bouton Google */
+            background-color: #4285F4;
             color: white;
             padding: 12px 20px;
             text-decoration: none;
@@ -121,25 +193,34 @@
         }
 
         .btn-google:hover {
-            background-color: #3367D6; /* Couleur de fond du bouton au survol */
+            background-color: #3367D6;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header avec image de fond -->
+    <!-- Header -->
     <header>
         <h1>LES GUERRES MAJEURES</h1>
         <p>Un site complet sur les guerres majeures à travers le monde, leurs causes, leurs batailles et leurs conséquences.</p>
     </header>
 
+    <!-- Menu hamburger -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
     <!-- Navigation -->
     <nav>
-        <a href="#introduction">Introduction</a>
-        <a href="#chronologie">Chronologie</a>
-        <a href="#aspects">Aspects de la Guerre</a>
-        <a href="#consequences">Conséquences</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-links">
+            <a href="#introduction">Introduction</a>
+            <a href="#chronologie">Chronologie</a>
+            <a href="#aspects">Aspects de la Guerre</a>
+            <a href="#consequences">Conséquences</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -212,7 +293,7 @@
 
         <!-- Contact Section -->
         <section id="plus de détail ici" class="section">
-            <h2>Plus de détail ici</h2>
+            <h2>Contact</h2>
             <p>
                 Pour plus d'informations, vous pouvez vous rendre sur ce site :
             </p>
@@ -226,5 +307,14 @@
         <p>&copy; 2024 Les Guerres Majeures. Tous droits réservés.</p>
     </footer>
 
+    <script>
+        // Fonction pour ouvrir/fermer le menu hamburger
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = document.querySelector('.menu-icon');
+            navLinks.classList.toggle('open');
+            menuIcon.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
