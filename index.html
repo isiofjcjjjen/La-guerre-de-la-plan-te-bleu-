@@ -144,15 +144,13 @@
         }
 
         footer {
-            background-color: transparent;
+            background-color: #000; /* Fond noir */
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative; /* Modification ici */
             width: 100%;
             bottom: 0;
-            z-index: 10;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .timeline ul {
@@ -195,6 +193,28 @@
         .btn-google:hover {
             background-color: #3367D6;
         }
+
+        /* Bouton en bas à droite */
+        .cta-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .btn-orange {
+            background-color: #FF5733;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .btn-orange:hover {
+            background-color: #FF4500;
+        }
+
     </style>
 </head>
 <body>
@@ -254,50 +274,28 @@
                         <h3>Guerre du Vietnam (1955-1975)</h3>
                         <p><span>Conflit régional</span> qui a opposé le Vietnam du Sud, soutenu par les États-Unis, au Vietnam du Nord, soutenu par l'Union soviétique.</p>
                     </li>
-                    <li>
-                        <h3>Guerre en Irak (2003-2011)</h3>
-                        <p><span>Conflit récent</span> où les États-Unis ont envahi l'Irak, déclenchant des décennies de guerre et d'instabilité dans la région.</p>
-                    </li>
                 </ul>
             </div>
         </section>
 
-        <!-- Aspects de la Guerre Section -->
+        <!-- Aspects de la Guerre -->
         <section id="aspects" class="section">
             <h2>Aspects de la Guerre</h2>
             <p>
-                La guerre comporte plusieurs aspects clés qui définissent son déroulement et ses conséquences. Voici quelques-uns des
-                aspects les plus importants :
+                Les guerres ont des impacts divers qui vont au-delà du champ de bataille. Elles affectent la politique, l'économie,
+                la société et même la culture des nations impliquées. Les guerres peuvent engendrer des avancées technologiques, 
+                mais aussi des souffrances humaines incommensurables.
             </p>
-            <ul>
-                <li><strong>Stratégie militaire :</strong> Les plans et les tactiques utilisées par les armées pour remporter des victoires.</li>
-                <li><strong>Technologie de guerre :</strong> L'évolution des armes et des véhicules de guerre, y compris les avions, les tanks et les armes nucléaires.</li>
-                <li><strong>Politique internationale :</strong> Les alliances et les rivalités entre nations pendant un conflit.</li>
-                <li><strong>Psychologie des soldats :</strong> L'impact psychologique de la guerre sur les individus et les sociétés.</li>
-            </ul>
         </section>
 
-        <!-- Conséquences de la Guerre Section -->
+        <!-- Conséquences de la Guerre -->
         <section id="consequences" class="section">
             <h2>Conséquences de la Guerre</h2>
             <p>
-                Les guerres ont des conséquences profondes et durables sur les sociétés, les économies et les cultures. Les conséquences peuvent
-                être immédiates ou se prolonger sur plusieurs décennies. Les principales conséquences incluent :
+                Les conséquences des guerres sont multiples et variées. Des millions de vies humaines sont perdues, les économies
+                sont dévastées, des infrastructures sont détruites, et les relations internationales sont redéfinies. De plus,
+                les guerres laissent souvent un héritage durable en termes de traumatismes psychologiques et de tensions géopolitiques.
             </p>
-            <ul>
-                <li><strong>Impact humain :</strong> Les pertes en vies humaines, les blessures et les traumatismes psychologiques chez les soldats et les civils.</li>
-                <li><strong>Conséquences économiques :</strong> La destruction des infrastructures, la dette nationale et les effets sur les économies mondiales.</li>
-                <li><strong>Modifications géopolitiques :</strong> La redéfinition des frontières et des alliances internationales, comme cela a été le cas après les deux guerres mondiales.</li>
-            </ul>
-        </section>
-
-        <!-- Plus de détails ici Section -->
-        <section id="details" class="section">
-            <h2>Plus de détails ici</h2>
-            <p>
-                Pour plus d'informations, vous pouvez vous rendre sur ce site :
-            </p>
-            <a href="https://www.google.com" class="btn-google" target="_blank">Accéder à Google</a> <!-- Bouton Google -->
         </section>
 
     </div>
@@ -307,14 +305,20 @@
         <p>&copy; 2024 Les Guerres Majeures. Tous droits réservés.</p>
     </footer>
 
+    <!-- Bouton en bas à droite -->
+    <div class="cta-button">
+        <a href="guerre_de_demain.html" class="btn-orange">La guerre de demain</a>
+    </div>
+
     <script>
-        // Fonction pour ouvrir/fermer le menu hamburger
+        // Fonction pour activer/désactiver le menu hamburger
         function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
             const menuIcon = document.querySelector('.menu-icon');
-            navLinks.classList.toggle('open');
+            const navLinks = document.querySelector('.nav-links');
             menuIcon.classList.toggle('open');
+            navLinks.classList.toggle('open');
         }
     </script>
+
 </body>
 </html>
