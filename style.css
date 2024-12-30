@@ -1,0 +1,66 @@
+/* Réinitialisation des marges et padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mise en page globale */
+body {
+    background-color: #87CEEB; /* Fond bleu pour imiter le ciel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Zone de jeu */
+#gameArea {
+    width: 400px;
+    height: 600px;
+    background-color: #f4f4f4;
+    border: 3px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Joueur */
+#player {
+    width: 40px;
+    height: 40px;
+    background-color: #ff6347; /* Couleur rouge pour le joueur */
+    position: absolute;
+    bottom: 10px;
+    left: 180px; /* Position initiale au centre */
+}
+
+/* Obstacles */
+#obstacle {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    position: absolute;
+    top: -40px;
+    left: 100px; /* Position initiale aléatoire */
+    animation: fall 2s linear infinite;
+}
+
+/* Animation des obstacles qui tombent */
+@keyframes fall {
+    from {
+        top: -40px;
+    }
+    to {
+        top: 600px;
+    }
+}
+
+/* Score */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #000;
+}
