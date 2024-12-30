@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un site complet sur les guerres majeures à travers l'histoire, leurs causes, leurs batailles et leurs conséquences.">
+    <title>Les Guerres Majeures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            position: relative;
+        }
+
+        header {
+            background-image: url('https://lelephant-larevue.fr/wp-content/uploads/2013/10/ouverture-grande-guerre.jpg'); /* Image de fond */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(8px); /* Applique un flou en arrière-plan pour améliorer la lisibilité */
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Ombre légère pour améliorer la lisibilité du texte */
+            color: white; /* Changer la couleur du titre en blanc */
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Ombre pour le sous-titre */
+            color: white; /* Couleur du texte en blanc */
+        }
+
+        nav {
+            background-color: #FF5733; /* Changer la couleur de fond du menu en orange */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white; /* Couleur des liens en blanc */
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #FF4500; /* Lien au survol avec un orange plus foncé */
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            color: black; /* Tous les autres titres (h1, h2) seront en noir */
+        }
+
+        footer {
+            background-color: transparent; /* Fond complètement transparent */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 10;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre du texte pour améliorer la lisibilité */
+        }
+
+        .timeline ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .timeline li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .timeline li h3 {
+            margin: 0;
+            color: #FF5733; /* Titre des éléments de la timeline en orange */
+        }
+
+        .timeline li p {
+            margin: 5px 0;
+        }
+
+        .timeline li span {
+            font-weight: bold;
+        }
+
+        .btn-google {
+            background-color: #4285F4; /* Couleur de fond du bouton Google */
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .btn-google:hover {
+            background-color: #3367D6; /* Couleur de fond du bouton au survol */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header avec image de fond -->
+    <header>
+        <h1>LES GUERRES MAJEURES</h1>
+        <p>Un site complet sur les guerres majeures à travers le monde, leurs causes, leurs batailles et leurs conséquences.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#chronologie">Chronologie</a>
+        <a href="#aspects">Aspects de la Guerre</a>
+        <a href="#consequences">Conséquences</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Introduction Section -->
+        <section id="introduction" class="section">
+            <h2>Introduction à la Guerre</h2>
+            <p>
+                La guerre est un phénomène complexe qui a marqué l'histoire de l'humanité depuis ses débuts. Elle est souvent
+                perçue comme une lutte violente entre des groupes, des nations ou des civilisations. Les causes des guerres peuvent
+                être multiples : conflits territoriaux, idéologiques, économiques, ou encore des rivalités politiques. Les guerres
+                ont un impact profond sur les sociétés et peuvent changer le cours de l'histoire.
+            </p>
+        </section>
+
+        <!-- Chronologie Section -->
+        <section id="chronologie" class="section">
+            <h2>Chronologie des Guerres Majeures</h2>
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <h3>Première Guerre Mondiale (1914-1918)</h3>
+                        <p><span>Conflit majeur</span> qui a impliqué de nombreuses nations et a redéfini la carte géopolitique de l'Europe.</p>
+                    </li>
+                    <li>
+                        <h3>Seconde Guerre Mondiale (1939-1945)</h3>
+                        <p><span>Conflit mondial</span> impliquant presque toutes les nations du monde, entraînant la défaite des puissances de l'Axe.</p>
+                    </li>
+                    <li>
+                        <h3>Guerre du Vietnam (1955-1975)</h3>
+                        <p><span>Conflit régional</span> qui a opposé le Vietnam du Sud, soutenu par les États-Unis, au Vietnam du Nord, soutenu par l'Union soviétique.</p>
+                    </li>
+                    <li>
+                        <h3>Guerre en Irak (2003-2011)</h3>
+                        <p><span>Conflit récent</span> où les États-Unis ont envahi l'Irak, déclenchant des décennies de guerre et d'instabilité dans la région.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Aspects de la Guerre Section -->
+        <section id="aspects" class="section">
+            <h2>Aspects de la Guerre</h2>
+            <p>
+                La guerre comporte plusieurs aspects clés qui définissent son déroulement et ses conséquences. Voici quelques-uns des
+                aspects les plus importants :
+            </p>
+            <ul>
+                <li><strong>Stratégie militaire :</strong> Les plans et les tactiques utilisées par les armées pour remporter des victoires.</li>
+                <li><strong>Technologie de guerre :</strong> L'évolution des armes et des véhicules de guerre, y compris les avions, les tanks et les armes nucléaires.</li>
+                <li><strong>Politique internationale :</strong> Les alliances et les rivalités entre nations pendant un conflit.</li>
+                <li><strong>Psychologie des soldats :</strong> L'impact psychologique de la guerre sur les individus et les sociétés.</li>
+            </ul>
+        </section>
+
+        <!-- Conséquences de la Guerre Section -->
+        <section id="consequences" class="section">
+            <h2>Conséquences de la Guerre</h2>
+            <p>
+                Les guerres ont des conséquences profondes et durables sur les sociétés, les économies et les cultures. Les conséquences peuvent
+                être immédiates ou se prolonger sur plusieurs décennies. Les principales conséquences incluent :
+            </p>
+            <ul>
+                <li><strong>Impact humain :</strong> Les pertes en vies humaines, les blessures et les traumatismes psychologiques chez les soldats et les civils.</li>
+                <li><strong>Conséquences économiques :</strong> La destruction des infrastructures, la dette nationale et les effets sur les économies mondiales.</li>
+                <li><strong>Modifications géopolitiques :</strong> La redéfinition des frontières et des alliances internationales, comme cela a été le cas après les deux guerres mondiales.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>
+                Pour plus d'informations, vous pouvez vous rendre sur ce site :
+            </p>
+            <a href="https://www.google.com" class="btn-google" target="_blank">Accéder à Google</a> <!-- Bouton Google -->
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Les Guerres Majeures. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
